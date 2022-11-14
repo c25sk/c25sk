@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<style type="text/css">
+	
+	body{
+		margin: 0px;
+		background-image: url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/76536/baseball-diamond-clipart-xl.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 600px;
+	}
+
+	#hit {
+
+	}	
+
+	#ball {
+	width:100px;
+	height:100px;
+	background-size:contain;
+	background-repeat: no-repeat;
+	background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPZs-7t6UrxjNTTGbfJbn5n6up8CSYq7YXYA&usqp=CAU);
+	position:absolute;
+	transition: 1s;
+	animation-name: pitch;
+	animation-duration: 3s;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear:;
+	left:47%;
+	top:85%;
+	}
+
+@keyframes pitch {
+	0% {left: 47%; top: 300px;}
+	50% {left: 47%; top: 85%;}
+
+}
+
+	#text {
+		width: 32%;
+		height: 100px;
+		font-size: 10vw;
+		font-family: sans-serif;
+		text-align: center;
+		display: inline-block;
+		color: dodgerblue;
+		transition: .2s;
+		opacity: 0%;
+}
+	
+
+
+</style>
+
+</head>
+<body>
+
+	<div id="ball"></div>
+	<div id="hit"></div>
+	<div id="text">Single!</div>
+
+<script type="text/javascript">
+	
+
+	document.addEventListener("click", function (event){
+		console.log(event.clientX, event.clientY);
+		ball.style.left = 800 + "px"
+		ball.style.top = 10 + "px"
+		text.style.opacity = 100 + "%"
+		
+
+	
+	}
+);
+
+</script>
+
+</body>
+</html>
