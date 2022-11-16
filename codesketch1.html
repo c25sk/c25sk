@@ -25,7 +25,7 @@
 	height:100px;
 	background-size:contain;
 	background-repeat: no-repeat;
-	background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPZs-7t6UrxjNTTGbfJbn5n6up8CSYq7YXYA&usqp=CAU);
+	background-image:url(baseball.png);
 	position:absolute;
 	transition: 1s;
 	animation-name: pitch;
@@ -55,6 +55,17 @@
 		opacity: 0%;
 }
 	
+	#text1 {
+		width: 32%;
+		height: 200px;
+		font-size: 13vw;
+		font-family: sans-serif;
+		text-align: center;
+		display: inline-block;
+		color: red;
+		transition: .2s;
+		opacity: 0%;
+}
 
 
 </style>
@@ -65,16 +76,35 @@
 	<div id="ball"></div>
 	<div id="hit"></div>
 	<div id="text">Single!</div>
+	<div id="text1">Strike!</div>
+
 
 <script type="text/javascript">
 	
+	let timer = 0
+	function timing (){
+		timer = timer+1
+	console.log(timer)
+
+	}
+
+	setInterval(timing, 1000)
 
 	document.addEventListener("click", function (event){
-		console.log(event.clientX, event.clientY);
-		ball.style.left = 800 + "px"
-		ball.style.top = 10 + "px"
-		text.style.opacity = 100 + "%"
 		
+		console.log(event.clientX, event.clientY);
+		
+		
+			if(timer <= 1.2){
+			ball.style.left = 800 + "px"
+			ball.style.top = 10 + "px"
+			text.style.opacity = 100 + "%"
+		}
+
+		if(timer >1.2){
+				text1.style.opacity = 100 + "%"
+				alert("You waited too long!")
+		}
 
 	
 	}
