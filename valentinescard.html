@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Happy Valentines Day!</title>
+<style type="text/css">
+body{
+	background-color: lightpink;
+
+}
+#topText{
+	font-size: 50px;
+	display: inline-block;
+
+
+	
+}
+.hearty{
+	width: 50px;
+	height: 50px;
+	background-image:url(heart.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: inline-block;
+	position: absolute;
+
+}
+
+#animation{
+	width: 300px;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_3_twGQ_R3rEZuH0G3ODJab3MWcjJAouBeQ&usqp=CAU);
+	animation-name: float;
+	animation-duration: 3s;
+	position: relative;
+	animation-delay: 0.1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	opacity: 0%;
+	}
+
+	@keyframes float {
+	0% {background-color: white; left: 0; top: 0px;}
+	25% {background-color: white; left: 1000px; top:0px;}
+	50% {background-color: white; left: 1000px; top:200px;}
+	75% {background-color: white; left: 0; top: 200px;}
+	100% {background-color: white; left: 0px; top: 0px;}
+}
+
+</style>
+
+</head>
+<body>
+
+<center><div id="topText">happy valentines day mom!
+<br>(click on screen) </div></center>
+<div id="animation"></div>
+<script type="text/javascript">
+
+
+document.addEventListener("mousemove", 
+	function makeHearts(event){
+	var hearts = document.createElement("div");
+	document.body.appendChild(hearts);
+	hearts.classList.add('hearty');
+	hearts.style.left=event.clientX + "px"
+	hearts.style.top=event.clientY + "px"
+
+	let counter = 0;
+
+	document.addEventListener("click", 
+		function(){
+			counter = counter+1
+			console.log(counter)
+
+			if(counter%2 == 1){
+				document.body.style.backgroundColor = "palevioletred";
+				animation.style.opacity = 100 + "%";
+			} 
+
+		
+
+
+
+		}
+
+		)
+	
+	
+
+})
+</script>
+
+</body>
+</html>

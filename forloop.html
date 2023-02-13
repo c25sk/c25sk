@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<style type="text/css">
+	
+.muffin{
+	width:100px;
+	height:100px;
+	background-image:url(https://static01.nyt.com/images/2016/05/03/dining/03COOKING-JORDANMARSHMUFFIN2/03COOKING-JORDANMARSHMUFFIN2-articleLarge-v2.jpg);
+	background-size: contain;
+	display: inline-block;
+
+}
+/*Idea:
+Website with pictures I take when I go on a walk and when you click on the photo it links to where I took the photo
+
+
+*/
+</style>
+</head>
+<body> 
+
+<script type="text/javascript">
+	function makeMuffins(x){
+
+		var muffin = document.createElement('div');
+
+		document.body.appendChild(muffin)
+
+		muffin.classList.add("muffin")
+		muffin.innerText = x
+
+	}
+	for (var i=0; i<100;i=i+1)
+	{makeMuffins(i)}
+
+</script>
+</body>
+</html>
