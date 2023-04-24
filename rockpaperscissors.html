@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		.container{
+			width:300px;
+			height:300px;
+			position:relative;
+			display:inline-block;
+			border:3px solid black;
+		}
+
+		#rock{
+			width: 100px;
+			height: 50px;
+			position: relative;
+			background: skyblue;
+		}
+		#paper{
+			width: 100px;
+			height: 50px;
+			position: relative;
+			background: cadetblue;
+		}
+		#scissors{
+			width: 100px;
+			height: 50px;
+			position: relative;
+			background: royalblue;
+		}
+
+
+
+	</style>
+</head>
+<body>
+
+<div class="container" id="person">
+	<div class="button" id="rock">Rock</div>
+		<div class="button" id="paper">Paper</div>
+			<div class="button" id="scissors">Scissors</div>
+</div>
+<div class="container" id="computer"></div>
+
+<div id="text">You choose: <input id="textChoice"></input></div>
+
+<script>
+
+	var choice;
+
+	rock.addEventListener("click", function(){
+		choice = "rock";
+		console.log(choice)
+
+	})
+	paper.addEventListener("click", function(){
+		choice = "paper";
+		console.log(choice)
+
+	})
+	scissors.addEventListener("click", function(){
+		choice = "scissors";
+		console.log(choice)
+
+	})
+var computer = ["rock", "paper", "scissors"];
+
+var number = Math.round(Math.random()*2)
+text.innerText = computer[number];
+var computer = computer[number]
+console.log(computer)
+
+
+if(choice== rock&& computer == scissors){alert("you win")}
+
+</script>
+
+
+	<!-- VISION:
+	three buttons for rock, paper, scissors.
+	You click on one of the buttons and then that is your choice.
+
+
+	Computer then choses it's choices and that shows up somewhere.
+
+	Then we have some sort of function that compares your answer with computer answer and says who wins.
+
+	Execution:
+
+	Step 1: Make three divs or buttons each that has an event listener.
+
+	If you click them they set a variable to either "rock", "paper", or "scissors"
+
+
+	Then we have an array of "rock", "paper", and "scissors" that the computer choses from to set it's variable to  "rock", "paper", or "scissors"
+
+	it has to show somewhere on the screen what you have picked and what the computer has picked.
+
+	____ -->
+
+</body>
+</html>
